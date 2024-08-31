@@ -23,8 +23,8 @@ define KernelPackage/rc-core
   SUBMENU := $(LINUXTV_MENU)
   TITLE := Remote Controller support
   KCONFIG := \
-	CONFIG_MEDIA_RC_SUPPORT=y \
-	CONFIG_RC_CORE
+	CONFIG_MEDIA_RC_SUPPORT=n \
+	CONFIG_RC_CORE=n
   FILES := $(PKG_BUILD_DIR)/v4l/rc-core.ko
   AUTOLOAD := $(call AutoProbe,rc-core)
   DEPENDS := +kmod-input-core +kmod-mc
